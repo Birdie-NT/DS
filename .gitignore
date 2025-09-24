@@ -1,0 +1,11 @@
+# Rider / IntelliJ IDEA project files
+.idea/
+
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
