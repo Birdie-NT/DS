@@ -31,3 +31,8 @@ function isValid (s: string): boolean {
     }
     return stack.length === 0;
 }
+
+/**
+ * Time Complexity: O(n) ----> We iterate through each character once
+ * Space Complexity: O(n) ---> We use stack to store opening brackets 
+ */
