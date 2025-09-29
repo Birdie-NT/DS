@@ -17,16 +17,16 @@
 
 function isValid (s: string): boolean {
     const stack: string[] = [];
-    const pairs: Record<string, string> = {')': '(', '}': '{', ']': '['};
+    const pairs: Record<string, string> = { '(' : ')',  '{' :'}', '[' :']'};
 
     for (const char of s) {
         if (pairs[char]) {
-            // If it's a closing bracket, check the last element in stack
-            if (stack.pop() !== pairs[char])
-                return false;
-        } else {
             // If it's an opening bracket, push onto stack
             stack.push(char);
+        } else {
+            // If it's a closing bracket, check the last element in stack
+            if( stack.pop() !== char)
+            return false;
         }
     }
     return stack.length === 0;
